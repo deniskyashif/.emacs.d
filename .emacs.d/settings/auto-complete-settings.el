@@ -1,8 +1,20 @@
+
 (require 'auto-complete) 
 
 (require 'auto-complete-config) 
 (ac-config-default)
 (global-auto-complete-mode 1)
+
+;; define a function which initializes auto-complete-c-headers and gets called for c/c++ hooks
+(defun my:ac-c-header-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers)
+  (add-to-list 'achead:include-directories '"C:\\MinGW\\include\\")
+)
+
+;; call this function from c/c++ hooks
+(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+(add-hook 'c-mode-hook 'my:ac-c-header-init)
 
 ;; from http://truongtx.me/2013/01/06/config-yasnippet-and-autocomplete-on-emacs/
 ; set the trigger key so that it can work together with yasnippet on

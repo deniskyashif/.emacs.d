@@ -4,8 +4,11 @@
 ; package repositories
 (require 'package-repositories)
 
-;; Auto complete
+;; auto complete
 (require 'auto-complete-settings)
+
+;; yasnippet
+(require 'yasnippet-settings)
 
 ;; from https://github.com/jhamrick/emacs
 ;---------------------------------------------------------------------

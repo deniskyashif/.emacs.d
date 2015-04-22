@@ -4,6 +4,9 @@
 ; package repositories
 (require 'package-repositories)
 
+;; Auto complete
+(require 'auto-complete-settings)
+
 ;; from https://github.com/jhamrick/emacs
 ;---------------------------------------------------------------------
 ;; Put auto 'custom' changes in a separate file (this is stuff like

@@ -1,4 +1,5 @@
 .gitconfig
 *~
+.cask
 *.elc
 emacs/

@@ -13,4 +13,15 @@
 ;;(define-key js-mode-map "{" 'paredit-open-curly)
 ;;(define-key js-mode-map "}" 'paredit-close-curly-and-newline)
 
+;; js2-refactor config
+(require 'js2-refactor)
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+
 (provide 'js-settings)

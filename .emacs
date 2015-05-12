@@ -1,7 +1,10 @@
 ; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings")
 
-; package repositories
+;; set global settings
+(require 'global-settings)
+
+;; package repositories
 (require 'package-repositories)
 
 ;; auto complete

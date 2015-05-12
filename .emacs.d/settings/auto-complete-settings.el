@@ -21,20 +21,6 @@
 ; case sensitivity is important when finding matches
 (setq ac-ignore-case nil)
 
-;;:::::::;;
-;; C/C++ ;;
-;;:::::::;;
-
-;; define a function which initializes auto-complete-c-headers and gets called for c/c++ hooks
-(defun my:ac-c-header-init ()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"C:\\MinGW\\include\\")
-)
-
-;; call this function from c/c++ hooks
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
 
 ;;:::::::;;
 ;; C/C++ ;;
@@ -57,5 +43,10 @@
 
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
 
 (provide 'auto-complete-settings)

@@ -66,7 +66,7 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
-(set-default-font "DejaVu Sans Mono-9")
+(set-default-font "Source Code Pro-9")
 
 ; if there is size information associated with text, change the text
 ; size to reflect it

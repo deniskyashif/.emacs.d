@@ -8,14 +8,15 @@
 (setq package-list '(2048-game          
 		     ac-js2             
 		     auto-complete      
-		     auto-complete-c-headers 
+		     auto-complete-c-headers
+		     csharp-mode 
 		     dash               
-		     el-get             
 		     js2-mode           
 		     js2-refactor       
 		     multiple-cursors   
 		     neotree            
-		     nyan-mode          
+		     nyan-mode
+		     omnisharp
 		     popup              
 		     s                  
 		     simple-httpd       
@@ -28,7 +29,7 @@
 
 ;; list repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                       ;;("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.org/packages/")))
 
 ; activate all the packages (in particular autoloads)

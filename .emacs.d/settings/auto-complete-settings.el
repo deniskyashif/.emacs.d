@@ -7,6 +7,7 @@
 (require 'auto-complete-config) 
 (ac-config-default)
 (global-auto-complete-mode 1)
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; from http://truongtx.me/2013/01/06/config-yasnippet-and-autocomplete-on-emacs/
 ; set the trigger key so that it can work together with yasnippet on
@@ -48,5 +49,12 @@
    '(progn
       (require 'tern-auto-complete)
       (tern-ac-setup)))
+
+
+;;::::;;
+;; C# ;;
+;;::::;;
+
+(setq omnisharp-server-executable-path "C:\\OmniSharpServer\\OmniSharp\\bin\\Debug\\omnisharp.exe")
 
 (provide 'auto-complete-settings)

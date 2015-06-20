@@ -7,3 +7,4 @@ emacs/
 elpa
 eshell
 history
+.coffee_history

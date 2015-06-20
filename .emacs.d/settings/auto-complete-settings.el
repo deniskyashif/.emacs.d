@@ -31,8 +31,7 @@
 (defun my:ac-c-header-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"C:\\MinGW\\include\\")
-)
+  (add-to-list 'achead:include-directories '"C:\\MinGW\\include\\"))
 
 ;; call this function from c/c++ hooks
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
@@ -44,12 +43,19 @@
 
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
-(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+
+;; tern
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
 (eval-after-load 'tern
    '(progn
       (require 'tern-auto-complete)
       (tern-ac-setup)))
 
+;; fix error when tern does not autorefresh (https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/)
+(defun delete-tern-process ()
+  (interactive)
+  (delete-process "Tern"))
 
 ;;::::;;
 ;; C# ;;

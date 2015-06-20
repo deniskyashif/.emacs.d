@@ -14,6 +14,7 @@
 		     dash               
 		     js2-mode           
 		     js2-refactor
+		     jsx-mode
 		     magit
 		     multiple-cursors   
 		     neotree            

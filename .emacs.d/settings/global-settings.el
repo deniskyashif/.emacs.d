@@ -76,4 +76,6 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
+; linum-mode
+(global-set-key [f10] 'linum-mode)
 (provide 'global-settings)

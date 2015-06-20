@@ -1,6 +1,7 @@
 ;----------------;
 ;;; JavaScript ;;;
 ;----------------;
+(require 'web-beautify)
 
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
@@ -23,5 +24,14 @@
    '(progn
       (require 'tern-auto-complete)
       (tern-ac-setup)))
+
+;; web-beautify settings
+(eval-after-load 'js2-mode
+  '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
+
+(eval-after-load 'js2-mode
+  '(add-hook 'js2-mode-hook
+             (lambda ()
+               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
 
 (provide 'js-settings)

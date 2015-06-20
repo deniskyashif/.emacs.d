@@ -1,11 +1,11 @@
 ; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings")
 
+;; package settings
+(require 'packages)
+
 ;; set global settings
 (require 'global-settings)
-
-;; package repositories
-(require 'package-repositories)
 
 ;; auto complete
 (require 'auto-complete-settings)
@@ -15,6 +15,9 @@
 
 ;; javascript
 (require 'js-settings)
+
+;; coffeescript
+(require 'coffeescript-settings)
 
 ;; C#
 (require 'csharp-settings)

@@ -1,5 +1,5 @@
 ;---------------------;
-;;; Global Settings ;;;
+;;; global settings ;;;
 ;---------------------;
 
 ; language
@@ -71,5 +71,9 @@
 ; if there is size information associated with text, change the text
 ; size to reflect it
 (size-indication-mode 1)
+
+; neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
 (provide 'global-settings)

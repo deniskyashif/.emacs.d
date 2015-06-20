@@ -5,3 +5,5 @@
 *.dat
 emacs/
 elpa
+eshell
+history

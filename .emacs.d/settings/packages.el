@@ -9,10 +9,12 @@
 		     ac-js2             
 		     auto-complete      
 		     auto-complete-c-headers
+		     company
 		     csharp-mode 
 		     dash               
 		     js2-mode           
-		     js2-refactor       
+		     js2-refactor
+		     magit
 		     multiple-cursors   
 		     neotree            
 		     nyan-mode
@@ -23,7 +25,8 @@
 		     skewer-mode        
 		     tern               
 		     tern-auto-complete 
-		     yasnippet          
+		     yasnippet
+		     web-beautify
 		     zenburn-theme
 		     ))
 
@@ -44,5 +47,5 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(provide 'package-repositories)
+(provide 'packages)
 

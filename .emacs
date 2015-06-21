@@ -14,7 +14,7 @@
 (require 'yasnippet-settings)
 
 ;; C/C++
-(require 'c-settings)
+(require 'c-cpp-settings)
 
 ;; javascript
 (require 'js-settings)

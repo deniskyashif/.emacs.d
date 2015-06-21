@@ -1,4 +1,4 @@
-; path where settings files are kept
+;; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings")
 
 ;; package settings
@@ -12,6 +12,9 @@
 
 ;; yasnippet
 (require 'yasnippet-settings)
+
+;; C/C++
+(require 'c-settings)
 
 ;; javascript
 (require 'js-settings)

@@ -11,11 +11,15 @@
 		     auto-complete-c-headers
 		     company
 		     csharp-mode 
-		     dash               
+		     dash
+		     flymake
+		     flymake-cursor
+		     flymake-google-cpplint
+		     google-c-style
+		     gotham-theme
 		     js2-mode           
 		     js2-refactor
-		     jsx-mode
-		     magit
+		     jsx-mode		     
 		     multiple-cursors   
 		     neotree            
 		     nyan-mode
@@ -36,14 +40,14 @@
                        ;;("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.org/packages/")))
 
-; activate all the packages (in particular autoloads)
+;; activate all the packages (in particular autoloads)
 (package-initialize)
 
-; fetch the list of packages available 
+;; fetch the list of packages available 
 (unless package-archive-contents
   (package-refresh-contents))
 
-; install the missing packages
+;; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))

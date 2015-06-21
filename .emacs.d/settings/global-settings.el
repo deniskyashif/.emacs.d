@@ -66,7 +66,7 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
-(set-default-font "Source Code Pro-9")
+(set-frame-font "DejaVu Sans Mono-10")
 
 ; if there is size information associated with text, change the text
 ; size to reflect it
@@ -78,4 +78,5 @@
 
 ; linum-mode
 (global-set-key [f10] 'linum-mode)
+
 (provide 'global-settings)

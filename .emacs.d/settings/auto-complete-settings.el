@@ -37,7 +37,7 @@
       (add-to-list 'achead:include-directories '"C:\\MinGW\\include\\")))
    ((string-equal system-type "gnu/linux")
     (progn
-      (message "TODO: Add header files location path!")))))
+      (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include")))))
 
 ;; call this function from c/c++ hooks
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)

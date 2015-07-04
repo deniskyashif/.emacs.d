@@ -15,9 +15,11 @@
        '(flymake-google-cpplint-command "C:\\Python34\\Scripts\\cpplint"))))
    ((string-equal system-type "gnu/linux")
     (progn
-      (message "TODO: add path for linux"))))
+      (custom-set-variables
+       '(flymake-google-cpplint-command "/usr/local/bin/cpplint")))))
 
-  (flymake-google-cpplint-load))
+  (flymake-google-cpplint-load)
+)
 
 (add-hook 'c-mode-hook 'my:flymake-google-init)
 (add-hook 'c++-mode-hook 'my:flymake-google-init)

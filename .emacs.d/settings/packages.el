@@ -13,7 +13,6 @@
                      coffee-mode
 		     csharp-mode 
 		     dash
-                     evil-mode
 		     flymake
 		     flymake-cursor
 		     flymake-google-cpplint

@@ -31,7 +31,13 @@
 (defun my:ac-c-header-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"C:\\MinGW\\include\\"))
+  (cond
+   ((string-equal system-type "windows-nt")
+    (progn
+      (add-to-list 'achead:include-directories '"C:\\MinGW\\include\\")))
+   ((string-equal system-type "gnu/linux")
+    (progn
+      (message "TODO: Add header files location path!")))))
 
 ;; call this function from c/c++ hooks
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
@@ -60,7 +66,8 @@
 ;;::::;;
 ;; C# ;;
 ;;::::;;
-
-(setq omnisharp-server-executable-path "C:\\OmniSharpServer\\OmniSharp\\bin\\Debug\\omnisharp.exe")
+(if (eq system-type "windows-nt")
+ (progn
+   (setq omnisharp-server-executable-path "C:\\OmniSharpServer\\OmniSharp\\bin\\Debug\\omnisharp.exe")))
 
 (provide 'auto-complete-settings)

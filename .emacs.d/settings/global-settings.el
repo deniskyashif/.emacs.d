@@ -28,7 +28,7 @@
 ; default window width and height
 (defun custom-set-frame-size ()
   (add-to-list 'default-frame-alist '(height . 35))
-  (add-to-list 'default-frame-alist '(width . 130)))
+  (add-to-list 'default-frame-alist '(width . 90)))
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
 
@@ -78,5 +78,11 @@
 
 ; linum-mode
 (global-set-key [f10] 'linum-mode)
+
+;; backup files
+(setq backup-directory-alist `(("." . "~/.saves")))
+
+;; enable global electric-pair-mode
+(electric-pair-mode t)
 
 (provide 'global-settings)

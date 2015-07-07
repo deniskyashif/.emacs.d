@@ -10,6 +10,7 @@
 
 (setq js2-highlight-level 3)
 
+(add-hook 'js2-mode-hook (lambda () (linum-mode 1)))
 ;; https://truongtx.me/2014/02/23/set-up-javascript-development-environment-in-emacs/
 ;;(define-key js-mode-map "{" 'paredit-open-curly)
 ;;(define-key js-mode-map "}" 'paredit-close-curly-and-newline)

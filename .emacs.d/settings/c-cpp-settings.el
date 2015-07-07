@@ -2,7 +2,7 @@
 ;; C/C++ ;;
 ;;:::::::;;
 
-(setq-default c-basic-offset 2)
+(setq c-basic-offset 4)
 
 ;; start flymake-google-cpplint-load
 ;; define a function for flymake initialization
@@ -28,5 +28,6 @@
 (require 'google-c-style)
 (add-hook 'c-mode-hook 'google-set-c-style)
 (add-hook 'c-mode-hook 'google-make-newline-indent)
+(add-hook 'c-mode-hook (lambda () (linum-mode 1)))
 
 (provide 'c-cpp-settings)

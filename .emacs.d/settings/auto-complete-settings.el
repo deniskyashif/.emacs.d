@@ -1,4 +1,4 @@
-;-------------------;
+
 ;;; Auto-Complete ;;;
 ;-------------------;
 
@@ -32,13 +32,10 @@
 (defun my:ac-c-header-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
-  (cond
-   ((string-equal system-type "windows-nt")
-    (progn
-      (add-to-list 'achead:include-directories '"C:\\MinGW\\include\\")))
-   ((string-equal system-type "gnu/linux")
-    (progn
-      (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include")))))
+  (when mswindows-env
+    (add-to-list 'achead:include-directories '"C\\MinGW\\include"))
+  (when linux-env
+    (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include")))
 
 ;; call this function from c/c++ hooks
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
@@ -68,17 +65,19 @@
 ;; C# ;;
 ;;::::;;
 
-(when linux-p
+(when linux-env
   (setq omnisharp-server-executable-path "~/omnisharp-roslyn/scripts/Omnisharp"))
 
 (defun my:csharp-mode ()
   (add-to-list 'company-backends 'company-omnisharp)
   (omnisharp-mode)
   (company-mode)
- ;; (flycheck-mode)
+  (flycheck-mode)
   (turn-on-eldoc-mode))
 
 (setq omnisharp-company-strip-trailing-brackets nil)
+(setq omnisharp-company-ignore-case 1)
+
 (add-hook 'csharp-mode-hook 'my:csharp-mode)
 
 (add-to-list 'company-backends 'company-omnisharp)

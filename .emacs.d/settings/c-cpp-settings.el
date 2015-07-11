@@ -8,15 +8,12 @@
 ;; define a function for flymake initialization
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint)
-  (cond
-   ((string-equal system-type "windows-nt")
-    (progn
-      (custom-set-variables
-       '(flymake-google-cpplint-command "C:\\Python34\\Scripts\\cpplint"))))
-   ((string-equal system-type "gnu/linux")
-    (progn
-      (custom-set-variables
-       '(flymake-google-cpplint-command "/usr/local/bin/cpplint")))))
+  (when mswindows-env
+    (custom-set-variables
+     '(flymake-google-cpplint-command "C:\\Python34\\Scripts\\cpplint")))
+  (when linux-env
+    (custom-set-variables
+       '(flymake-google-cpplint-command "/usr/local/bin/cpplint")))
 
   (flymake-google-cpplint-load)
 )

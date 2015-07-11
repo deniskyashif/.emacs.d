@@ -20,6 +20,7 @@
 		     gotham-theme
 		     js2-mode           
 		     js2-refactor
+                     json-mode
 		     jsx-mode		     
 		     multiple-cursors   
 		     neotree            
@@ -33,8 +34,7 @@
 		     tern-auto-complete 
 		     yasnippet
 		     web-beautify
-		     zenburn-theme
-		     ))
+		     zenburn-theme))
 
 ;; list repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")

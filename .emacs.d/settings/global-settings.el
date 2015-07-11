@@ -2,6 +2,9 @@
 ;;; global settings ;;;
 ;---------------------;
 
+(defvar mswindows-p (string-equal system-type "windows-nt"))
+(defvar linux-p (string-equal system-type "gnu/linux"))
+
 ; language
 (setq current-language-environment "English")
 

@@ -3,7 +3,8 @@
 ;-------------------;
 
 (require 'auto-complete) 
-(require 'auto-complete-config) 
+(require 'auto-complete-config)
+(require 'company)
 
 (ac-config-default)
 (global-auto-complete-mode 1)
@@ -66,8 +67,20 @@
 ;;::::;;
 ;; C# ;;
 ;;::::;;
-(if (eq system-type "windows-nt")
- (progn
-   (setq omnisharp-server-executable-path "C:\\OmniSharpServer\\OmniSharp\\bin\\Debug\\omnisharp.exe")))
+
+(when linux-p
+  (setq omnisharp-server-executable-path "~/omnisharp-roslyn/scripts/Omnisharp"))
+
+(defun my:csharp-mode ()
+  (add-to-list 'company-backends 'company-omnisharp)
+  (omnisharp-mode)
+  (company-mode)
+ ;; (flycheck-mode)
+  (turn-on-eldoc-mode))
+
+(setq omnisharp-company-strip-trailing-brackets nil)
+(add-hook 'csharp-mode-hook 'my:csharp-mode)
+
+(add-to-list 'company-backends 'company-omnisharp)
 
 (provide 'auto-complete-settings)

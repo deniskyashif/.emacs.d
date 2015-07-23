@@ -21,7 +21,8 @@
 		     js2-mode           
 		     js2-refactor
                      json-mode
-		     jsx-mode		     
+		     jsx-mode
+		     markdown-mode
 		     multiple-cursors   
 		     neotree            
 		     nyan-mode

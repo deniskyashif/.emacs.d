@@ -10,7 +10,9 @@
 
 (setq js2-highlight-level 3)
 
-(add-hook 'js2-mode-hook (lambda () (linum-mode 1)))
+(add-hook 'js2-mode-hook (lambda ()
+                           (local-set-key (kbd "C-c C-b") (lambda () (message "hihi")))
+                           (linum-mode 1)))
 
 ;; js2-refactor config
 (require 'js2-refactor)
@@ -25,5 +27,23 @@
   '(add-hook 'js2-mode-hook
              (lambda ()
                (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+
+
+;; auto complete config
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+
+;; tern
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+
+;; fix error when tern does not autorefresh (https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/)
+(defun delete-tern-process ()
+  (interactive)
+  (delete-process "Tern"))
 
 (provide 'js-settings)

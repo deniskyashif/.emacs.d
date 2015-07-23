@@ -1,4 +1,4 @@
-
+;-------------------;
 ;;; Auto-Complete ;;;
 ;-------------------;
 
@@ -22,64 +22,5 @@
 (setq ac-auto-start 2)
 ; case sensitivity is important when finding matches
 (setq ac-ignore-case nil)
-
-
-;;:::::::;;
-;; C/C++ ;;
-;;:::::::;;
-
-;; define a function which initializes auto-complete-c-headers and gets called for c/c++ hooks
-(defun my:ac-c-header-init ()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (when mswindows-env
-    (add-to-list 'achead:include-directories '"C\\MinGW\\include"))
-  (when linux-env
-    (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include")))
-
-;; call this function from c/c++ hooks
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
-
-;;::::::::::::;;
-;; JavaScript ;;
-;;::::::::::::;;
-
-(add-hook 'js-mode-hook 'js2-minor-mode)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
-
-;; tern
-(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
-(add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
-(eval-after-load 'tern
-   '(progn
-      (require 'tern-auto-complete)
-      (tern-ac-setup)))
-
-;; fix error when tern does not autorefresh (https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/)
-(defun delete-tern-process ()
-  (interactive)
-  (delete-process "Tern"))
-
-;;::::;;
-;; C# ;;
-;;::::;;
-
-(when linux-env
-  (setq omnisharp-server-executable-path "~/omnisharp-roslyn/scripts/Omnisharp"))
-
-(defun my:csharp-mode ()
-  (add-to-list 'company-backends 'company-omnisharp)
-  (omnisharp-mode)
-  (company-mode)
-  (flycheck-mode)
-  (turn-on-eldoc-mode))
-
-(setq omnisharp-company-strip-trailing-brackets nil)
-(setq omnisharp-company-ignore-case 1)
-
-(add-hook 'csharp-mode-hook 'my:csharp-mode)
-
-(add-to-list 'company-backends 'company-omnisharp)
 
 (provide 'auto-complete-settings)

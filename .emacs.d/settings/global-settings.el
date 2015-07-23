@@ -44,9 +44,6 @@
 ; ignore case when searching
 (setq-default case-fold-search 1)
 
-; set the keybinding so that you can use f4 for goto line
-(global-set-key [f4] 'goto-line)
-
 ; show the current line and column numbers in the stats bar as well
 (line-number-mode 1)
 (column-number-mode 1)
@@ -69,21 +66,31 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
-(set-frame-font "Monaco-10")
+(set-frame-font "Monaco-9.5")
+;;(set-frame-font "Ubuntu Mono-10.5")
+;;(set-frame-font "Monospace-9")
 
 ; if there is size information associated with text, change the text
 ; size to reflect it
 (size-indication-mode 1)
 
-; neotree
+(defun my:open-settings-dir ()
+  "Go to emacs settings/ directory"
+  (interactive)
+  (find-file "~/.emacs.d/settings"))
+
+;; global keyboard shortcuts
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
-
-; linum-mode
 (global-set-key [f10] 'linum-mode)
+(global-set-key (kbd "C-c C-g") 'goto-line)
+(global-set-key [f5] 'shell-command)
+(global-set-key [f12] 'my:open-settings-dir)
 
 ;; backup files
 (setq backup-directory-alist `(("." . "~/.saves")))
+;; auto-save files
+(setq auto-save-file-name-transforms `((".*" , "~/.saves")))
 
 ;; enable global electric-pair-mode
 (electric-pair-mode t)

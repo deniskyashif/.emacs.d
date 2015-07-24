@@ -5,8 +5,7 @@
 (require 'package)
 
 ;; list packages 
-(setq package-list '(2048-game          
-		     ac-js2             
+(setq package-list '(ac-js2             
 		     auto-complete      
 		     auto-complete-c-headers
 		     company
@@ -17,15 +16,10 @@
 		     flymake-cursor
 		     flymake-google-cpplint
 		     google-c-style
-		     gotham-theme
 		     js2-mode           
 		     js2-refactor
-                     json-mode
-		     jsx-mode
-		     markdown-mode
 		     multiple-cursors   
 		     neotree            
-		     nyan-mode
 		     omnisharp
 		     popup              
 		     s                  
@@ -35,7 +29,7 @@
 		     tern-auto-complete 
 		     yasnippet
 		     web-beautify
-		     zenburn-theme))
+                     web-mode))
 
 ;; list repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")

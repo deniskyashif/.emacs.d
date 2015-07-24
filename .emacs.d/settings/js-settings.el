@@ -1,18 +1,18 @@
 ;----------------;
 ;;; JavaScript ;;;
 ;----------------;
+
+(require 'flycheck)
 (require 'web-beautify)
 
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-;;(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-
-(setq-default js2-basic-offset 2)
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 
 (setq js2-highlight-level 3)
+(setq-default js2-basic-offset 2)
+(setq jsx-indent-level 2)
 
-(add-hook 'js2-mode-hook (lambda ()
-                           (local-set-key (kbd "C-c C-b") (lambda () (message "hihi")))
-                           (linum-mode 1)))
+(add-hook 'js2-mode-hook (lambda () (linum-mode 1)))
 
 ;; js2-refactor config
 (require 'js2-refactor)
@@ -29,13 +29,11 @@
                (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
 
 
-;; auto complete config
+;; auto complete
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
-
-;; tern
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
-(add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
+
 (eval-after-load 'tern
    '(progn
       (require 'tern-auto-complete)

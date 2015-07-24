@@ -19,6 +19,9 @@
 ;; javascript
 (require 'js-settings)
 
+;; web mode (html, css, jsx)
+(require 'web-mode-settings)
+
 ;; coffeescript
 (require 'coffeescript-settings)
 

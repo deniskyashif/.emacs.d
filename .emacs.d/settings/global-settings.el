@@ -66,7 +66,7 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
-(set-frame-font "Monaco-9.5")
+;;(set-frame-font "Monaco-9.5")
 ;;(set-frame-font "Ubuntu Mono-10.5")
 ;;(set-frame-font "Monospace-9")
 

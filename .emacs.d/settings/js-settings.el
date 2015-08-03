@@ -23,10 +23,10 @@
 (eval-after-load 'js2-mode
   '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
 
-(eval-after-load 'js2-mode
-  '(add-hook 'js2-mode-hook
-             (lambda ()
-               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+;;(eval-after-load 'js2-mode
+;;  '(add-hook 'js2-mode-hook
+;;             (lambda ()
+;;               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
 
 
 ;; auto complete

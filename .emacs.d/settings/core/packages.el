@@ -5,29 +5,25 @@
 (require 'package)
 
 ;; list packages 
-(setq package-list '(ac-js2             
-		     auto-complete      
-		     auto-complete-c-headers
-		     company
-                     coffee-mode
+(setq package-list '(company
+		     company-tern
 		     csharp-mode 
 		     dash
 		     flymake
 		     flymake-cursor
-		     flymake-google-cpplint
-		     google-c-style
 		     js2-mode           
 		     js2-refactor
                      magit
 		     multiple-cursors   
 		     neotree            
 		     omnisharp
-		     popup              
+		     popup
+                     projectile
 		     s                  
 		     simple-httpd       
-		     skewer-mode        
+		     skewer-mode
+                     smooth-scrolling
 		     tern               
-		     tern-auto-complete 
 		     yasnippet
 		     web-beautify
                      web-mode))

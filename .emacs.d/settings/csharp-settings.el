@@ -4,7 +4,7 @@
 (when linux-env
   (setq omnisharp-server-executable-path "~/omnisharp-roslyn/scripts/Omnisharp"))
 (when mswindows-env
-  (setq omnisharp-server-executable-path "C:\\omnisharp-roslyn\\scripts\\Omnisharp"))
+  (setq omnisharp-server-executable-path "C:/omnisharp-roslyn/scripts/Omnisharp"))
 
 (defun my:csharp-mode ()
   (add-to-list 'company-backends 'company-omnisharp)
@@ -15,6 +15,7 @@
 
 (setq omnisharp-company-strip-trailing-brackets nil)
 (setq omnisharp-company-ignore-case 1)
+(setq c-basic-offset 4)
 
 (add-hook 'csharp-mode-hook 'my:csharp-mode)
 

@@ -11,26 +11,20 @@
 ;; set global settings
 (require 'global-settings)
 
-;; auto complete
-(require 'auto-complete-settings)
-
 ;; company mode
 (require 'company-settings)
 
 ;; yasnippet
 (require 'yasnippet-settings)
 
-;; C/C++
-(require 'c-cpp-settings)
+;; C#
+(require 'csharp-settings)
 
 ;; javascript
 (require 'js-settings)
 
 ;; web mode (html, css, jsx)
 (require 'web-mode-settings)
-
-;; C#
-(require 'csharp-settings)
 
 ;; from https://github.com/jhamrick/emacs
 ;---------------------------------------------------------------------

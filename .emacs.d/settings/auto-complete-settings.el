@@ -20,6 +20,7 @@
 ;; from http://blog.deadpansincerity.com/2011/05/setting-up-emacs-as-a-javascript-editing-environment-for-fun-and-profit/
 ; Start auto-completion after 2 characters of a word
 (setq ac-auto-start 2)
+
 ; case sensitivity is important when finding matches
 (setq ac-ignore-case nil)
 

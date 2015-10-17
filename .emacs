@@ -1,5 +1,9 @@
 ;; path where settings files are kept
-(add-to-list 'load-path "~/.emacs.d/settings")
+
+(package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/settings/")
+(add-to-list 'load-path "~/.emacs.d/settings/core")
 
 ;; package settings
 (require 'packages)
@@ -22,9 +26,6 @@
 ;; web mode (html, css, jsx)
 (require 'web-mode-settings)
 
-;; coffeescript
-(require 'coffeescript-settings)
-
 ;; C#
 (require 'csharp-settings)
 
@@ -33,5 +34,5 @@
 ;; Put auto 'custom' changes in a separate file (this is stuff like
 ;; custom-set-faces and custom-set-variables)
 (load 
- (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
+ (setq custom-file (expand-file-name "settings/common/custom.el" user-emacs-directory))
  'noerror)

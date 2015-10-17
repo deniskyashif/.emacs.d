@@ -10,6 +10,7 @@
 
 (setq js2-highlight-level 3)
 (setq-default js2-basic-offset 2)
+(setq js-indent-level 2)
 (setq jsx-indent-level 2)
 
 (add-hook 'js2-mode-hook (lambda () (linum-mode 1)))

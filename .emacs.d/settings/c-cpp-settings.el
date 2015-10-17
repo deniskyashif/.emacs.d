@@ -14,9 +14,7 @@
   (when linux-env
     (custom-set-variables
        '(flymake-google-cpplint-command "/usr/local/bin/cpplint")))
-
-  (flymake-google-cpplint-load)
-)
+  (flymake-google-cpplint-load))
 
 (add-hook 'c-mode-hook 'my:flymake-google-init)
 (add-hook 'c++-mode-hook 'my:flymake-google-init)
@@ -40,6 +38,5 @@
 ;; call this function from c/c++ hooks
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
-
 
 (provide 'c-cpp-settings)

@@ -18,6 +18,7 @@
 		     google-c-style
 		     js2-mode           
 		     js2-refactor
+                     magit
 		     multiple-cursors   
 		     neotree            
 		     omnisharp

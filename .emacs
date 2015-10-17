@@ -14,6 +14,9 @@
 ;; auto complete
 (require 'auto-complete-settings)
 
+;; company mode
+(require 'company-settings)
+
 ;; yasnippet
 (require 'yasnippet-settings)
 
@@ -34,5 +37,5 @@
 ;; Put auto 'custom' changes in a separate file (this is stuff like
 ;; custom-set-faces and custom-set-variables)
 (load 
- (setq custom-file (expand-file-name "settings/common/custom.el" user-emacs-directory))
+ (setq custom-file (expand-file-name "settings/core/custom.el" user-emacs-directory))
  'noerror)

@@ -4,6 +4,7 @@
 
 (require 'flycheck)
 (require 'web-mode)
+(require 'company-web-html)
 
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
@@ -30,17 +31,24 @@
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
-  (setq web-mode-ac-sources-alist
-        '(("css" . (ac-source-words-in-buffer ac-source-css-property))
-          ("html" . (ac-source-words-in-buffer ac-source-abbrev))
-          ("jsx" . (ac-source-words-in-buffer ac-source-words-in-same-mode-buffers))))
-  (auto-complete-mode 1)
+
   (linum-mode 1)
   (lambda ()
     (when (equal web-mode-content-type "jsx")
       ;; enable flycheck
       (flycheck-select-checker 'jsxhint-checker)
       (flycheck-mode))))
+
+;; Enable JavaScript completion between <script>...</script> etc.
+(defadvice company-tern (before web-mode-set-up-ac-sources activate)
+  "Set `tern-mode' based on current language before running company-tern."
+  (if (equal major-mode 'web-mode)
+      (let ((web-mode-cur-language
+             (web-mode-language-at-pos)))
+        (if (or (string= web-mode-cur-language "javascript")
+               (string= web-mode-cur-language "jsx"))
+            (unless tern-mode (tern-mode))
+          (if tern-mode (tern-mode))))))
 
 (add-hook 'web-mode-hook 'my:web-mode-hook)
 

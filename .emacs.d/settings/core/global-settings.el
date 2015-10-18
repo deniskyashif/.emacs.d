@@ -91,7 +91,7 @@
   "Go to my workspace"
   (interactive)
   (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "D:\\Workspace")))
+  (when mswindows-env (find-file "D:/Workspace")))
 
 ;; global keyboard shortcuts
 (require 'neotree)
@@ -102,6 +102,8 @@
 (global-set-key (kbd "C-c C-g") 'goto-line)
 (global-set-key [f5] 'shell-command)
 (global-set-key [f12] 'my:open-settings-dir)
+(global-set-key [f9] 'magit-status)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; backup files
 (setq backup-directory-alist `(("." . "~/.saves")))

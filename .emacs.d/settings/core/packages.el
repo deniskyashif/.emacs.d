@@ -5,8 +5,10 @@
 (require 'package)
 
 ;; list packages 
-(setq package-list '(company
+(setq package-list '(ace-jump-mode
+                     company
 		     company-tern
+                     company-web
 		     csharp-mode 
 		     dash
 		     flymake

@@ -74,9 +74,10 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
-(set-frame-font "Monaco-9")
-;;(set-frame-font "Source Code Pro-10")
-;;(set-frame-font "DejaVu Sans Mono-9")
+;; (set-frame-font "Monaco-9")
+;; (set-frame-font "Ubuntu Mono-11")
+(set-frame-font "DejaVu Sans Mono-9")
+;; (set-default-font "Inconsolata-11")
 
 ; if there is size information associated with text, change the text
 ; size to reflect it
@@ -113,5 +114,8 @@
 
 ;; enable global electric-pair-mode
 (electric-pair-mode t)
+
+;; enable global git gutter mode
+(global-git-gutter-mode t)
 
 (provide 'global-settings)

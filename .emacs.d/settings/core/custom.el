@@ -12,7 +12,7 @@
  '(ansi-color-names-vector
    ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(ansi-term-color-vector
-   [unspecified "#1B2B34" "#EC5f67" "#99C794" "#FAC863" "#6699CC" "#C594C5" "#6699CC" "#C0C5CE"])
+   [unspecified "#1B2B34" "#EC5f67" "#99C794" "#FAC863" "#6699CC" "#C594C5" "#6699CC" "#C0C5CE"] t)
  '(background-color "#202020")
  '(background-mode dark)
  '(blink-cursor-mode nil)
@@ -62,7 +62,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (base16-theme noctilux-theme autumn-light-theme material-theme ace-jump-mode company-web angular-snippets solarized-theme git-gutter markdown-mode+ latex-preview-pane geiser magit zenburn-theme gotham-theme web-mode web-beautify tern-auto-complete tern omnisharp neotree js2-refactor google-c-style flymake-google-cpplint flymake-cursor dash csharp-mode coffee-mode company auto-complete-c-headers auto-complete ac-js2)))
+    (project-explorer circe jscs base16-theme noctilux-theme autumn-light-theme material-theme ace-jump-mode company-web angular-snippets solarized-theme git-gutter markdown-mode+ latex-preview-pane geiser magit zenburn-theme gotham-theme web-mode web-beautify tern-auto-complete tern omnisharp neotree js2-refactor google-c-style flymake-google-cpplint flymake-cursor dash csharp-mode coffee-mode company auto-complete-c-headers auto-complete ac-js2)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(prolog-program-name

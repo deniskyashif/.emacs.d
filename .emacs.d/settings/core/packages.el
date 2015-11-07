@@ -18,10 +18,10 @@
 		     js2-refactor
                      magit
 		     multiple-cursors   
-		     neotree            
 		     omnisharp
 		     popup
                      projectile
+                     project-explorer
 		     s                  
 		     simple-httpd       
 		     skewer-mode

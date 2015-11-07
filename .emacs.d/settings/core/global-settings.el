@@ -98,7 +98,7 @@
 (require 'neotree)
 
 (global-set-key [f2] 'my:open-workspace-dir)
-(global-set-key [f8] 'neotree-toggle)
+(global-set-key [f8] 'project-explorer-toggle)
 (global-set-key [f10] 'linum-mode)
 (global-set-key (kbd "C-c C-g") 'goto-line)
 (global-set-key [f5] 'shell-command)
@@ -116,6 +116,11 @@
 (electric-pair-mode t)
 
 ;; enable global git gutter mode
-(global-git-gutter-mode t)
+;; (global-git-gutter-mode t)
+
+;; set prolog mode for files with *.pl extension
+(setq auto-mode-alist
+      (cons (cons "\\.pl" 'prolog-mode)
+            auto-mode-alist))
 
 (provide 'global-settings)

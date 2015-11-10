@@ -104,7 +104,7 @@
 (global-set-key [f5] 'shell-command)
 (global-set-key [f12] 'my:open-settings-dir)
 (global-set-key [f9] 'magit-status)
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-:") 'ace-jump-mode)
 
 ;; backup files
 (setq backup-directory-alist `(("." . "~/.saves")))

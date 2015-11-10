@@ -37,3 +37,4 @@ emacs-24.5
 .emacs.d/elpa/
 .emacs.d/eshell/
 *.cache
+emacs-25/

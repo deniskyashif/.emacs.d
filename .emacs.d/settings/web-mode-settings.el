@@ -5,6 +5,7 @@
 (require 'flycheck)
 (require 'web-mode)
 (require 'company-web-html)
+(require 'emmet-mode)
 
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
@@ -50,6 +51,7 @@
             (unless tern-mode (tern-mode))
           (if tern-mode (tern-mode))))))
 
+(add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'web-mode-hook 'my:web-mode-hook)
 
 (provide 'web-mode-settings)

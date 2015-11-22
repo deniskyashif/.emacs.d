@@ -11,6 +11,7 @@
                      company-web
 		     csharp-mode 
 		     dash
+                     emmet-mode
 		     flymake
 		     flymake-cursor
                      git-gutter

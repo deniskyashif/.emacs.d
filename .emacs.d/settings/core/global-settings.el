@@ -127,4 +127,8 @@
       (cons (cons "\\.pl" 'prolog-mode)
             auto-mode-alist))
 
+(when mswindows-env
+    (setq find-program "c:/gnuwin32/bin/find.exe"
+	   grep-program "c:/gnuwin32/bin/grep.exe"))
+
 (provide 'global-settings)

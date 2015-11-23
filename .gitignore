@@ -39,3 +39,4 @@ emacs-24.5
 *.cache
 emacs-25/
 /.bash_history
+/.emacs.d/settings/core/custom.el

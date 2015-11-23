@@ -2,6 +2,13 @@
 ;;; global settings ;;;
 ;---------------------;
 
+(require 'helm)
+(require 'neotree)
+(require 'tool-bar)
+(require 'mwheel)
+(require 'paren)
+(require 'font-lock)
+
 (defvar mswindows-env
   (string-match "windows" (symbol-name system-type)))
 
@@ -18,14 +25,12 @@
 (menu-bar-mode 0)
 
 ; don't show the tool bar
-(require 'tool-bar)
 (tool-bar-mode 0)
 
 ; don't show the scroll bar
 (if window-system (scroll-bar-mode 0))
 
 ; turn on mouse wheel support for scrolling
-(require 'mwheel)
 (mouse-wheel-mode 1)
 
 ; each line of text gets one line on the screen (i.e., text will run
@@ -63,11 +68,9 @@
 (transient-mark-mode 1)
 
 ; highlight parentheses when the cursor is next to them
-(require 'paren)
 (show-paren-mode 1)
 
 ; text decoration
-(require 'font-lock)
 ; (setq font-lock-maximum-decoration 1)
 (global-font-lock-mode 1)
 (global-hi-lock-mode nil)
@@ -95,8 +98,9 @@
   (when mswindows-env (find-file "D:/Workspace")))
 
 ;; global keyboard shortcuts
-(require 'neotree)
 
+(helm-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key [f2] 'my:open-workspace-dir)
 (global-set-key [f8] 'project-explorer-toggle)
 (global-set-key [f10] 'linum-mode)

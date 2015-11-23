@@ -38,3 +38,4 @@ emacs-24.5
 .emacs.d/eshell/
 *.cache
 emacs-25/
+/.bash_history

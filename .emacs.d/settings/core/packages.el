@@ -15,6 +15,7 @@
 		     flymake
 		     flymake-cursor
                      git-gutter
+                     helm
 		     js2-mode           
 		     js2-refactor
                      magit

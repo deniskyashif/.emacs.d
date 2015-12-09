@@ -22,6 +22,7 @@
 		     multiple-cursors   
 		     omnisharp
 		     popup
+                     powerline
                      projectile
                      project-explorer
 		     s                  

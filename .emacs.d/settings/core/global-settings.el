@@ -3,12 +3,10 @@
 ;---------------------;
 
 (require 'helm)
-(require 'neotree)
 (require 'tool-bar)
 (require 'mwheel)
 (require 'paren)
 (require 'font-lock)
-(require 'powerline)
 
 (defvar mswindows-env
   (string-match "windows" (symbol-name system-type)))
@@ -131,8 +129,5 @@
 (when mswindows-env
     (setq find-program "c:/gnuwin32/bin/find.exe"
           grep-program "c:/gnuwin32/bin/grep.exe"))
-
-;; activate powerline
-(powerline-center-theme)
 
 (provide 'global-settings)

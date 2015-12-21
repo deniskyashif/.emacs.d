@@ -9,26 +9,16 @@
                      company
 		     company-tern
                      company-web
-		     csharp-mode 
-		     dash
                      emmet-mode
 		     flymake
 		     flymake-cursor
-                     git-gutter
                      helm
 		     js2-mode           
 		     js2-refactor
                      magit
-		     multiple-cursors   
 		     omnisharp
-		     popup
-                     powerline
-                     projectile
-                     project-explorer
-		     s                  
-		     simple-httpd       
-		     skewer-mode
-                     smooth-scrolling
+		     project-explorer
+		     smooth-scrolling
 		     tern               
 		     yasnippet
 		     web-beautify

@@ -96,6 +96,15 @@
   (when linux-env (find-file "~/workspace"))
   (when mswindows-env (find-file "D:/Workspace")))
 
+(defun my:search-in-google ()
+  (interactive)
+  (browse-url
+   (concat "http://google.com/search?q="
+	   (url-hexify-string
+	    (if mark-active
+		(buffer-substring (region-beginning) (region-end))
+	      (read-string "Google: "))))))
+
 ;; global keyboard shortcuts
 
 (helm-mode 1)

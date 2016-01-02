@@ -19,7 +19,8 @@
 		     omnisharp
 		     project-explorer
 		     smooth-scrolling
-		     tern               
+		     tern
+		     twittering-mode
 		     yasnippet
 		     web-beautify
                      web-mode))

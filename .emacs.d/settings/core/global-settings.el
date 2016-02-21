@@ -76,10 +76,8 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
-;; (set-frame-font "Monaco-9")
-;; (set-frame-font "Ubuntu Mono-11")
-(set-frame-font "DejaVu Sans Mono-9")
-;; (set-default-font "Inconsolata-11")
+ (set-frame-font "Ubuntu Mono-10")
+;;(set-frame-font "DejaVu Sans Mono-9")
 
 ; if there is size information associated with text, change the text
 ; size to reflect it
@@ -138,5 +136,7 @@
 (when mswindows-env
     (setq find-program "c:/gnuwin32/bin/find.exe"
           grep-program "c:/gnuwin32/bin/grep.exe"))
+
+(setq visible-bell t)
 
 (provide 'global-settings)

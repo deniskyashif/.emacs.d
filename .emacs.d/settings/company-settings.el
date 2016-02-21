@@ -9,6 +9,8 @@
 (setq company-minimum-prefix-length 2)
 (setq company-tooltip-flip-when-above t)
 
+(setq company-dabbrev-downcase nil)                  ; case sensitive suggestions
+
 (global-set-key (kbd "C-c /") 'company-files)        ; Force complete file names on "C-c /" key
 
 (global-company-mode 1)

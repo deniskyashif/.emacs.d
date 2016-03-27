@@ -76,11 +76,11 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
- (set-frame-font "Ubuntu Mono-10")
+ (set-frame-font "Ubuntu Mono-10.5")
 ;;(set-frame-font "DejaVu Sans Mono-9")
 
-; if there is size information associated with text, change the text
-; size to reflect it
+;; if there is size information associated with text, change the text
+;; size to reflect it
 (size-indication-mode 1)
 
 (defun my:open-settings-dir ()
@@ -117,10 +117,10 @@
 (define-key global-map (kbd "C-:") 'ace-jump-mode)
 
 ;; backup files
-(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-directory-alist `(("." . "~/.emacs.d/.saves")))
 
 ;; auto-save files
-(setq auto-save-file-name-transforms `((".*" , "~/.saves")))
+(setq auto-save-file-name-transforms `((".*" , "~/.emacs.d/.saves")))
 
 ;; enable global electric-pair-mode
 (electric-pair-mode t)

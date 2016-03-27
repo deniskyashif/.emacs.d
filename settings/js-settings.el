@@ -13,9 +13,9 @@
 (add-to-list 'company-backends 'company-tern)
 
 (setq js2-highlight-level 3)
-(setq-default js2-basic-offset 4)
-(setq js-indent-level 4)
-(setq jsx-indent-level 4)
+(setq-default js2-basic-offset 2)
+(setq js-indent-level 2)
+(setq jsx-indent-level 2)
 
 ;; js2-refactor config
 (require 'js2-refactor)

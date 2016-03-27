@@ -15,4 +15,5 @@
 
 (add-hook 'typescript-mode-hook 'my:ts-mode)
 
+(provide 'ts-settings)
 

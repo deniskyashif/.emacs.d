@@ -1,7 +1,6 @@
-;; path where settings files are kept
-
 (package-initialize)
 
+;; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings/")
 (add-to-list 'load-path "~/.emacs.d/settings/core")
 
@@ -22,6 +21,9 @@
 
 ;; javascript
 (require 'js-settings)
+
+;; typescript
+(require 'ts-settings)
 
 ;; web mode (html, css, jsx)
 (require 'web-mode-settings)

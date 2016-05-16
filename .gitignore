@@ -40,3 +40,5 @@ emacs-24.5
 emacs-25/
 /.bash_history
 /settings/core/custom.el
+server/
+url/

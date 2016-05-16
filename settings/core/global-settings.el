@@ -76,7 +76,7 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
- (set-frame-font "Ubuntu Mono-10.5")
+ (set-frame-font "Ubuntu Mono-9.5")
 ;;(set-frame-font "DejaVu Sans Mono-9")
 
 ;; if there is size information associated with text, change the text
@@ -92,7 +92,7 @@
   "Go to my workspace"
   (interactive)
   (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "D:/Workspace")))
+  (when mswindows-env (find-file "C:/Workspace")))
 
 (defun my:search-in-google ()
   (interactive)
@@ -138,5 +138,13 @@
           grep-program "c:/gnuwin32/bin/grep.exe"))
 
 (setq visible-bell t)
+(smooth-scrolling-mode t)
+
+;; http://www.archivum.info/comp.emacs/2007-06/00348/Re-Ignore-%5EM-in-mixed-%28LF-and-CR+LF%29-line-ended-textfiles.html
+(defun my:remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
 
 (provide 'global-settings)

@@ -13,9 +13,9 @@
 (add-to-list 'company-backends 'company-tern)
 
 (setq js2-highlight-level 3)
-(setq-default js2-basic-offset 2)
-(setq js-indent-level 2)
-(setq jsx-indent-level 2)
+(setq-default js2-basic-offset 4)
+(setq js-indent-level 4)
+(setq jsx-indent-level 4)
 
 ;; js2-refactor config
 (require 'js2-refactor)
@@ -34,7 +34,7 @@
 
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook (lambda ()
-			   (tern-mode)
+			   ;; (tern-mode)
 			   (linum-mode 1)))
 
 ;; fix error when tern does not autorefresh (https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/)

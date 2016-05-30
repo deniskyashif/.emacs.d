@@ -21,7 +21,6 @@
 		     smooth-scrolling
 		     tern
 		     tide
-		     twittering-mode
 		     yasnippet
 		     web-beautify
                      web-mode))

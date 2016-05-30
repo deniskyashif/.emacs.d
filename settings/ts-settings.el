@@ -9,7 +9,7 @@
     (eldoc-mode)
     (tide-start-server-if-required))
 
-(setq typescript-indent-level 2. typescript-expr-indent-offset 2)
+(setq typescript-indent-level 4. typescript-expr-indent-offset 4)
 
 (add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
 

@@ -147,4 +147,11 @@
   (setq buffer-display-table (make-display-table))
   (aset buffer-display-table ?\^M []))
 
+(defun my:word-wrap ()
+  (toggle-truncate-lines)
+  (toggle-word-wrap))
+
+(add-hook 'org-mode-hook 'my:word-wrap)
+(add-hook 'text-mode-hook 'my:word-wrap)
+
 (provide 'global-settings)

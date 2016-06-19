@@ -148,10 +148,12 @@
   (aset buffer-display-table ?\^M []))
 
 (defun my:word-wrap ()
-  (toggle-truncate-lines)
-  (toggle-word-wrap))
+  (set truncate-lines t)
+  (set word-wrap t))
 
 (add-hook 'org-mode-hook 'my:word-wrap)
 (add-hook 'text-mode-hook 'my:word-wrap)
+
+(setq-default indent-tabs-mode nil)
 
 (provide 'global-settings)

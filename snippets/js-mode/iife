@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+#name : IIFE
+# --
+;(function($2){
+    'use strict';
+
+    $3
+}($1));
+

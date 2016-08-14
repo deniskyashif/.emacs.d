@@ -92,7 +92,7 @@
   "Go to my workspace"
   (interactive)
   (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "C:/Workspace")))
+  (when mswindows-env (find-file "D:/Workspace")))
 
 (defun my:search-in-google ()
   (interactive)

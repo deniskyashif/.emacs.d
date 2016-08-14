@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : map
+# --
+${1:collection}.map(function($2) {
+    $0
+});

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+#name : foreach
+# --
+${1:collection}.forEach(function($2) {
+    $0
+});
+

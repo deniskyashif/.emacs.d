@@ -15,7 +15,7 @@
   (add-to-list 'company-backends 'company-omnisharp)
   (turn-on-eldoc-mode)
   (linum-on)
-  (omnisharp-mode)
+  ;; (omnisharp-mode)
   (company-mode)
   (flycheck-mode))
 

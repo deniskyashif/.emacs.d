@@ -92,7 +92,7 @@
   "Go to my workspace"
   (interactive)
   (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "D:/Workspace")))
+  (when mswindows-env (find-file "C:/Workspace")))
 
 (defun my:search-in-google ()
   (interactive)
@@ -147,6 +147,12 @@
   (setq buffer-display-table (make-display-table))
   (aset buffer-display-table ?\^M []))
 
+;; Source: http://www.emacswiki.org/emacs-en/download/misc-cmds.el
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive)
+  (revert-buffer t t))
+
 (defun my:word-wrap ()
   (set truncate-lines t)
   (set word-wrap t))
@@ -154,6 +160,8 @@
 (add-hook 'org-mode-hook 'my:word-wrap)
 (add-hook 'text-mode-hook 'my:word-wrap)
 
+;; insert 4 spaces for a tab
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 
 (provide 'global-settings)

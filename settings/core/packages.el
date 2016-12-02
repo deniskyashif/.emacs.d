@@ -16,6 +16,7 @@
                      js2-refactor
                      magit
                      omnisharp
+                     powerline
                      project-explorer
                      smooth-scrolling
                      swiper

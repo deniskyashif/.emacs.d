@@ -176,5 +176,6 @@
   (prefer-coding-system 'utf-8))
 
 (set-utf8-everywhere)
+(powerline-default-theme)
 
 (provide 'global-settings)

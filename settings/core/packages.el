@@ -7,22 +7,22 @@
 ;; list packages 
 (setq package-list '(ace-jump-mode
                      company
-		     company-tern
+                     company-tern
                      company-web
                      emmet-mode
-		     flymake
-		     flymake-cursor
-                     helm
-		     js2-mode           
-		     js2-refactor
+                     flymake
+                     flymake-cursor
+                     js2-mode           
+                     js2-refactor
                      magit
-		     omnisharp
-		     project-explorer
-		     smooth-scrolling
-		     tern
-		     tide
-		     yasnippet
-		     web-beautify
+                     omnisharp
+                     project-explorer
+                     smooth-scrolling
+                     swiper
+                     tern
+                     tide
+                     yasnippet
+                     web-beautify
                      web-mode))
 
 ;; list repositories

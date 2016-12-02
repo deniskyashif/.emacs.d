@@ -2,7 +2,6 @@
 ;;; global settings ;;;
 ;---------------------;
 
-(require 'helm)
 (require 'tool-bar)
 (require 'mwheel)
 (require 'paren)
@@ -92,7 +91,7 @@
   "Go to my workspace"
   (interactive)
   (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "C:/Workspace")))
+  (when mswindows-env (find-file "D:/Workspace")))
 
 (defun my:search-in-google ()
   (interactive)
@@ -104,9 +103,6 @@
 	      (read-string "Google: "))))))
 
 ;; global keyboard shortcuts
-
-(helm-mode 1)
-(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key [f2] 'my:open-workspace-dir)
 (global-set-key [f8] 'project-explorer-toggle)
 (global-set-key [f10] 'linum-mode)
@@ -157,11 +153,28 @@
   (set truncate-lines t)
   (set word-wrap t))
 
-(add-hook 'org-mode-hook 'my:word-wrap)
-(add-hook 'text-mode-hook 'my:word-wrap)
-
 ;; insert 4 spaces for a tab
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
+
+;; Ivy Config
+(require 'ivy)
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d/%d) ")
+
+;; set utf-8 by default
+(defun set-utf8-everywhere ()
+  (setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
+  (set-language-environment 'utf-8)
+  (set-keyboard-coding-system 'utf-8-mac) ; For old Carbon emacs on OS X only
+  (setq locale-coding-system 'utf-8)
+  (set-default-coding-systems 'utf-8)
+  (set-terminal-coding-system 'utf-8)
+  (unless (eq system-type 'windows-nt)
+    (set-selection-coding-system 'utf-8))
+  (prefer-coding-system 'utf-8))
+
+(set-utf8-everywhere)
 
 (provide 'global-settings)

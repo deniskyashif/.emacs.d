@@ -28,6 +28,9 @@
 ;; web mode (html, css, jsx)
 (require 'web-mode-settings)
 
+;; python
+(require 'py-settings)
+
 ;; from https://github.com/jhamrick/emacs
 ;---------------------------------------------------------------------
 ;; Put auto 'custom' changes in a separate file (this is stuff like

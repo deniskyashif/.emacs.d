@@ -9,6 +9,7 @@
                      company
                      company-tern
                      company-web
+                     elpy
                      emmet-mode
                      flymake
                      flymake-cursor

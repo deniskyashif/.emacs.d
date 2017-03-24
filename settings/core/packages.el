@@ -6,6 +6,7 @@
 
 ;; list packages 
 (setq package-list '(ace-jump-mode
+                     ace-window
                      company
                      company-tern
                      company-web

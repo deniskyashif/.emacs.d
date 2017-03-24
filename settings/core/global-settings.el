@@ -49,8 +49,6 @@
 ; make end and home keys go to the start/end of buffers
 (global-set-key (kbd "<end>") 'end-of-buffer)
 (global-set-key (kbd "<home>") 'beginning-of-buffer)
-(define-key input-decode-map "\e[1;5A" [C-up])
-(define-key input-decode-map "\e[1;5B" [C-down])
 
 ; ignore case when searching
 (setq-default case-fold-search 1)
@@ -75,8 +73,8 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
- (set-frame-font "Ubuntu Mono-9.5")
-;;(set-frame-font "DejaVu Sans Mono-9")
+;; (set-frame-font "Ubuntu Mono-10")
+(set-frame-font "DejaVu Sans Mono-9")
 
 ;; if there is size information associated with text, change the text
 ;; size to reflect it
@@ -91,7 +89,7 @@
   "Go to my workspace"
   (interactive)
   (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "D:/Workspace")))
+  (when mswindows-env (find-file "C:/Workspace")))
 
 (defun my:search-in-google ()
   (interactive)
@@ -107,9 +105,12 @@
 (global-set-key [f8] 'project-explorer-toggle)
 (global-set-key [f10] 'linum-mode)
 (global-set-key (kbd "C-c C-g") 'goto-line)
-(global-set-key [f5] 'shell-command)
+(global-set-key [f5] 'revert-buffer-no-confirm)
+(global-set-key [f6] 'shell-command)
 (global-set-key [f12] 'my:open-settings-dir)
 (global-set-key [f9] 'magit-status)
+(global-set-key (kbd "C-x o") 'ace-window)
+(global-set-key (kbd "C-K") 'kill-whole-line)
 (define-key global-map (kbd "C-:") 'ace-jump-mode)
 
 ;; backup files

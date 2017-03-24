@@ -98,7 +98,12 @@
 	   (url-hexify-string
 	    (if mark-active
 		(buffer-substring (region-beginning) (region-end))
-	      (read-string "Google: "))))))
+        (read-string "Google: "))))))
+
+(defun my:new-line-no-break ()
+  (interactive)
+  (end-of-line)
+  (newline-and-indent))
 
 ;; global keyboard shortcuts
 (global-set-key [f2] 'my:open-workspace-dir)
@@ -111,6 +116,7 @@
 (global-set-key [f9] 'magit-status)
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-K") 'kill-whole-line)
+(global-set-key (kbd "C-O") 'my:new-line-no-break)
 (define-key global-map (kbd "C-:") 'ace-jump-mode)
 
 ;; backup files

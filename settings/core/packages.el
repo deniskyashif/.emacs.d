@@ -14,6 +14,7 @@
                      emmet-mode
                      flymake
                      flymake-cursor
+                     helm
                      js2-mode           
                      js2-refactor
                      magit
@@ -21,7 +22,6 @@
                      powerline
                      project-explorer
                      smooth-scrolling
-                     swiper
                      tern
                      tide
                      yasnippet

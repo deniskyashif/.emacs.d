@@ -74,7 +74,7 @@
 (setq jit-lock-stealth-verbose 1)
 
 ;; (set-frame-font "Ubuntu Mono-10")
-(set-frame-font "DejaVu Sans Mono-9")
+(set-frame-font "DejaVu Sans Mono-9.5")
 
 ;; if there is size information associated with text, change the text
 ;; size to reflect it
@@ -89,7 +89,7 @@
   "Go to my workspace"
   (interactive)
   (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "C:/Workspace")))
+  (when mswindows-env (find-file "D:/Workspace")))
 
 (defun my:search-in-google ()
   (interactive)
@@ -164,11 +164,14 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
-;; Ivy Config
-(require 'ivy)
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-(setq ivy-count-format "(%d/%d) ")
+;; Helm config
+(require 'helm-config)
+(helm-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+
 
 ;; set utf-8 by default
 (defun set-utf8-everywhere ()

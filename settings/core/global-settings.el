@@ -115,8 +115,10 @@
 (global-set-key [f12] 'my:open-settings-dir)
 (global-set-key [f9] 'magit-status)
 (global-set-key (kbd "C-x o") 'ace-window)
-(global-set-key (kbd "C-K") 'kill-whole-line)
-(global-set-key (kbd "C-O") 'my:new-line-no-break)
+(global-set-key (kbd "C-c k") 'kill-whole-line)
+(global-set-key (kbd "C-k") 'kill-line)
+(global-set-key (kbd "C-i") 'my:new-line-no-break)
+(global-set-key (kbd "C-o") 'open-line)
 (define-key global-map (kbd "C-:") 'ace-jump-mode)
 
 ;; backup files
@@ -137,8 +139,8 @@
             auto-mode-alist))
 
 (when mswindows-env
-    (setq find-program "c:/gnuwin32/bin/find.exe"
-          grep-program "c:/gnuwin32/bin/grep.exe"))
+    (setq find-program "c:/cygwin64/bin/find.exe"
+          grep-program "c:/cygwin64/bin/grep.exe"))
 
 (setq visible-bell t)
 (smooth-scrolling-mode t)

@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : reduce
+# --
+${1:collection}.reduce($2 => $0);

@@ -158,10 +158,6 @@
   (interactive)
   (revert-buffer t t))
 
-(defun my:word-wrap ()
-  (set truncate-lines t)
-  (set word-wrap t))
-
 ;; insert 4 spaces for a tab
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -191,12 +187,7 @@
 (set-utf8-everywhere)
 (powerline-default-theme)
 
-(defun my:toggle-word-wrap ()
-  (interactive)
-  (toggle-truncate-lines)
-  (toggle-word-wrap))
-
-(add-hook 'org-mode-hook 'my:word-wrap)
-(add-hook 'text-mode-hook 'my:word-wrap)
+(add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'text-mode-hook 'visual-line-mode)
 
 (provide 'global-settings)

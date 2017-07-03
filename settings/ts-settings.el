@@ -2,7 +2,7 @@
 ;;; TypeScript ;;;
 ;;--------------;;
 
-(defun my:ts-mode ()
+(defun my:ts-mode-hook ()
     (tide-mode)
     (flycheck-mode)
     (setq flycheck-check-syntax-automatically '(save mode-enabled))
@@ -13,7 +13,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
 
-(add-hook 'typescript-mode-hook 'my:ts-mode)
+(add-hook 'typescript-mode-hook 'my:ts-mode-hook)
 
 (provide 'ts-settings)
 

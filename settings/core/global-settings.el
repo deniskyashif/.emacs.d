@@ -173,6 +173,7 @@
 (global-set-key (kbd "M-x") #'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
+(global-set-key (kbd "C-H") 'helm-show-kill-ring)
 
 
 ;; set utf-8 by default
@@ -189,5 +190,13 @@
 
 (set-utf8-everywhere)
 (powerline-default-theme)
+
+(defun my:toggle-word-wrap ()
+  (interactive)
+  (toggle-truncate-lines)
+  (toggle-word-wrap))
+
+(add-hook 'org-mode-hook 'my:word-wrap)
+(add-hook 'text-mode-hook 'my:word-wrap)
 
 (provide 'global-settings)

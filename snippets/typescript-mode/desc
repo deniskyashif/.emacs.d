@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : jasmine describe suite
+# --
+describe('$1', () => {
+    $2
+});

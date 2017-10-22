@@ -1,8 +1,10 @@
-[user]
-	name = deniskyashif
-[user]
-	email = denis.kyashif@gmail.com
-[credential]
-	helper = wincred
-[push]
-	default = current
+[user]
+	name = Denis Kyashif
+[user]
+	email = denis.kyashif@gmail.com
+[credential]
+	helper = wincred
+[push]
+	default = current
+[core]
+	editor = emacs

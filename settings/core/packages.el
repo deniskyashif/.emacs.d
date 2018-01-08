@@ -15,14 +15,14 @@
                      flymake
                      flymake-cursor
                      helm
-                     js2-mode           
-                     js2-refactor
+                     js2-mode
                      magit
+                     multiple-cursors
                      omnisharp
                      powerline
+                     prettier-js
                      project-explorer
                      smooth-scrolling
-                     tern
                      tide
                      yasnippet
                      web-beautify

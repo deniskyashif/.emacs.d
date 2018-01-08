@@ -89,7 +89,7 @@
   "Go to my workspace"
   (interactive)
   (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "D:/Workspace")))
+  (when mswindows-env (find-file "C:/Workspace")))
 
 (defun my:search-in-google ()
   (interactive)
@@ -189,5 +189,8 @@
 
 (add-hook 'org-mode-hook 'visual-line-mode)
 (add-hook 'text-mode-hook 'visual-line-mode)
+
+(require 'multiple-cursors)
+;; (multiple-cursors-mode)
 
 (provide 'global-settings)

@@ -4,7 +4,7 @@
 
 (require 'flycheck)
 (require 'web-beautify)
-(require 'js2-refactor)
+;; (require 'js2-refactor)
 (require 'prettier-js)
 
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))

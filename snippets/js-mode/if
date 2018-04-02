@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : if conditional
+# --
+if($1) {
+    $2
+}

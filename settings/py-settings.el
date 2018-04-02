@@ -2,7 +2,7 @@
 ;; Python ;;
 ;;::::::::;;
 
-;; pip install jedi flake8 importmagic autopep8cmd virtualenv
+;; Install dependencies: https://github.com/jorgenschaefer/elpy
 
 (elpy-enable)
 

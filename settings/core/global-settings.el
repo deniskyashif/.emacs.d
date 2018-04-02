@@ -191,6 +191,9 @@
 (add-hook 'text-mode-hook 'visual-line-mode)
 
 (require 'multiple-cursors)
-;; (multiple-cursors-mode)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 (provide 'global-settings)

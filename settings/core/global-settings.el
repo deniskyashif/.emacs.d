@@ -1,5 +1,5 @@
 ;---------------------;
-;;; global settings ;;;
+;;; Global Settings ;;;
 ;---------------------;
 
 (require 'tool-bar)
@@ -195,5 +195,25 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+(require 'page-break-lines)
+(turn-on-page-break-lines-mode)
+
+(require 'dashboard)
+(dashboard-setup-startup-hook)
+
+(setq dashboard-banner-logo-title "Welcome to Emacs")
+
+;; To enable .png support in Windows
+;; Download Inkscape and copy zlib1.dll, libpng16-16.dll to emacs/bin
+;; to check what needs to be copied eval:
+;; (cdr (assq 'png dynamic-library-
+
+(setq dashboard-startup-banner 'logo)
+(setq dashboard-items '((recents  . 10)
+                        (bookmarks . 5)
+                        (projects . 5)
+                        (agenda . 5)
+                        (registers . 5)))
 
 (provide 'global-settings)

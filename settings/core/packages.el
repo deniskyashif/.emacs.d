@@ -10,6 +10,7 @@
                      company
                      company-tern
                      company-web
+                     dashboard
                      elpy
                      emmet-mode
                      flymake
@@ -19,8 +20,10 @@
                      magit
                      multiple-cursors
                      omnisharp
+                     page-break-lines
                      powerline
                      prettier-js
+                     projectile
                      project-explorer
                      smooth-scrolling
                      tide

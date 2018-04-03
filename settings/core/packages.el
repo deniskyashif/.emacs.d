@@ -11,6 +11,7 @@
                      company-tern
                      company-web
                      dashboard
+                     editorconfig
                      elpy
                      emmet-mode
                      flymake
@@ -27,6 +28,7 @@
                      project-explorer
                      smooth-scrolling
                      tide
+                     use-package
                      yasnippet
                      web-beautify
                      web-mode))

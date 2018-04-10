@@ -119,6 +119,7 @@
 (global-set-key (kbd "C-k") 'kill-line)
 (global-set-key (kbd "C-S-O") 'my:new-line-no-break)
 (global-set-key (kbd "C-o") 'open-line)
+(global-set-key (kbd "C-.") 'company-complete)
 (define-key global-map (kbd "C-:") 'ace-jump-mode)
 
 ;; backup files

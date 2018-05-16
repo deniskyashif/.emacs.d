@@ -74,7 +74,8 @@
 (setq jit-lock-stealth-verbose 1)
 
 ;; (set-frame-font "Ubuntu Mono-10")
-(set-frame-font "DejaVu Sans Mono-9.5")
+;; (set-frame-font "DejaVu Sans Mono-9.5")
+(set-frame-font "Hack-9.5")
 
 ;; if there is size information associated with text, change the text
 ;; size to reflect it

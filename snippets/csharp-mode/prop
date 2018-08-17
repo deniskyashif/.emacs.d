@@ -2,4 +2,4 @@
 #name : prop
 # --
 
-public ${1:int} ${2:Name} { get; set; }
+public ${1:int} ${0:Name} { get; set; }

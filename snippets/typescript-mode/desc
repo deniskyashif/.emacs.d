@@ -2,5 +2,5 @@
 #name : jasmine describe suite
 # --
 describe('$1', () => {
-    $2
+    $0
 });

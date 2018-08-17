@@ -3,5 +3,5 @@
 # --
 foreach(var ${1:item} in ${2:collection})
 {
-    $3
+    $0
 }

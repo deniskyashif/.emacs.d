@@ -2,5 +2,5 @@
 #name : if conditional
 # --
 if($1) {
-    $2
+    $0
 }

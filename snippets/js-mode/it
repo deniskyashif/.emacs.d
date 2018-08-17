@@ -2,5 +2,5 @@
 #name : jasmine spec
 # --
 it('$1', () => {
-    $2
+    $0
 });

@@ -8,3 +8,25 @@
 	default = current
 [core]
 	editor = emacs
+[alias]
+    a = "add -A"
+    amend = "commit --amend"
+    br = branch
+    c = commit
+    co = checkout
+    d = diff
+    dc = "diff --cached"
+    f = fetch
+    l = "log --graph --decorate --pretty='format:%C(yellow)%h%Cgreen%d%Creset%s %C(white) (%an, %ar)%Creset' --abbrev-commit"
+    ls = ls-files
+    p = "pull --rebase"
+    puhs = push
+    r = "rebase -i"
+    rc = "add .; git rebase --continue"
+    s = status
+    show = hsow
+    st = stash
+    stahs = stash
+    today = "log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative"
+    undo = "reset --soft HEAD"
+    unstage = "reset HEAD"

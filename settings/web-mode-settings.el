@@ -28,9 +28,9 @@
   :modes (web-mode))
 
 (defun my:web-mode-hook ()
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
 
   (linum-mode 1)
   (lambda ()

@@ -11,7 +11,7 @@
 [alias]
     a = "add -A"
     amend = "commit --amend"
-    br = branch
+    b = branch
     c = commit
     co = checkout
     d = diff
@@ -20,7 +20,7 @@
     l = "log --graph --decorate --pretty='format:%C(yellow)%h%Cgreen%d%Creset%s %C(white) (%an, %ar)%Creset' --abbrev-commit"
     ls = ls-files
     p = "pull --rebase"
-    puhs = push
+    ps = push
     r = "rebase -i"
     rc = "add .; git rebase --continue"
     s = status

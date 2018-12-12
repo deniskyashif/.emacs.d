@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : test async
+# --
+test('$1', async () => {
+    $0
+});

@@ -7,7 +7,7 @@
 [push]
 	default = current
 [core]
-	editor = emacs
+	editor = notepad
 [alias]
     a = "add -A"
     amend = "commit --amend"
@@ -20,7 +20,9 @@
     l = "log --graph --decorate --pretty='format:%C(yellow)%h%Cgreen%d%Creset%s %C(white) (%an, %ar)%Creset' --abbrev-commit"
     ls = ls-files
     p = "pull --rebase"
+    pl = "pull --rebase=preserve"
     ps = push
+    pfl = "push –-force-with-lease"
     r = "rebase -i"
     rc = "add .; git rebase --continue"
     s = status

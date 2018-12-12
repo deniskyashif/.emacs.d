@@ -5,7 +5,7 @@
 (when linux-env
   (setq omnisharp-server-executable-path "~/omnisharp-roslyn/scripts/Omnisharp"))
 (when mswindows-env
-  (setq omnisharp-server-executable-path "c:/omnisharp-roslyn/OmniSharp.exe")) 
+  (setq omnisharp-server-executable-path "c:/Bin/omnisharp-win-x86/OmniSharp.exe"))
 
 (eval-after-load
   'company
@@ -27,7 +27,8 @@
   (electric-pair-local-mode 1) ;; Emacs 25
 
   (local-set-key (kbd "C-c r r") 'omnisharp-run-code-action-refactoring)
-  (local-set-key (kbd "C-c C-c") 'recompile))
+  (local-set-key (kbd "C-c C-c") 'recompile)
+  (local-set-key (kbd "M-.") 'omnisharp-go-to-definition))
 
 (add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)
 

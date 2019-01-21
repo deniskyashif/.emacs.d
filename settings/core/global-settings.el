@@ -40,8 +40,8 @@
 
 ; default window width and height
 (defun custom-set-frame-size ()
-  (add-to-list 'default-frame-alist '(height . 35))
-  (add-to-list 'default-frame-alist '(width . 90)))
+  (add-to-list 'default-frame-alist '(height . 55))
+  (add-to-list 'default-frame-alist '(width . 150)))
 
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
@@ -73,9 +73,9 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
-;; (set-frame-font "Ubuntu Mono-10")
+;; (set-frame-font "Ubuntu Mono-12")
 ;; (set-frame-font "DejaVu Sans Mono-9.5")
-(set-frame-font "Hack-9.5")
+(set-frame-font "Hack-10")
 
 ;; if there is size information associated with text, change the text
 ;; size to reflect it
@@ -141,8 +141,8 @@
             auto-mode-alist))
 
 (when mswindows-env
-    (setq find-program "c:/cygwin64/bin/find.exe"
-          grep-program "c:/cygwin64/bin/grep.exe"))
+    (setq find-program "c:/Bin/cygwin64/bin/find.exe"
+          grep-program "c:/Bin/cygwin64/bin/grep.exe"))
 
 (setq visible-bell t)
 (smooth-scrolling-mode t)
@@ -248,5 +248,9 @@
   :ensure t
   :config
   (editorconfig-mode 1))
+
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (provide 'global-settings)

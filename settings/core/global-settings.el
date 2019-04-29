@@ -73,10 +73,6 @@
 (setq jit-lock-contextually 1)
 (setq jit-lock-stealth-verbose 1)
 
-;; (set-frame-font "Ubuntu Mono-12")
-;; (set-frame-font "DejaVu Sans Mono-9.5")
-(set-frame-font "Hack-10")
-
 ;; if there is size information associated with text, change the text
 ;; size to reflect it
 (size-indication-mode 1)
@@ -89,8 +85,9 @@
 (defun my:open-workspace-dir ()
   "Go to my workspace"
   (interactive)
-  (when linux-env (find-file "~/workspace"))
-  (when mswindows-env (find-file "D:/Workspace")))
+  (if mswindows-env
+      (find-file "D:/Workspace")
+    (find-file "~/Workspace")))
 
 (defun my:search-in-google ()
   (interactive)
@@ -144,7 +141,8 @@
     (setq find-program "c:/Bin/cygwin64/bin/find.exe"
           grep-program "c:/Bin/cygwin64/bin/grep.exe"))
 
-(setq visible-bell t)
+(setq visible-bell nil)
+(setq ring-bell-function 'ignore)
 (smooth-scrolling-mode t)
 
 ;; http://www.archivum.info/comp.emacs/2007-06/00348/Re-Ignore-%5EM-in-mixed-%28LF-and-CR+LF%29-line-ended-textfiles.html
@@ -258,5 +256,7 @@
       mac-command-key-is-meta t
       mac-command-modifier 'meta
       mac-option-modifier 'none)
+
+(delete-file "~/Library/Colors/Emacs.clr")
 
 (provide 'global-settings)

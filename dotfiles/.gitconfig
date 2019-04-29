@@ -1,13 +1,13 @@
-[user]
-	name = Denis Kyashif
-[user]
-	email = denis.kyashif@gmail.com
-[credential]
-	helper = wincred
-[push]
-	default = current
+[user]
+    name = Denis Kyashif
+[user]
+    email = denis.kyashif@gmail.com
+[credential]
+    helper = osxkeychain
+[push]
+    default = current
 [core]
-	editor = notepad
+    editor = "emacs -nw -q"
 [alias]
     a = "add -A"
     amend = "commit --amend"
@@ -22,7 +22,7 @@
     p = "pull"
     pl = "pull --rebase=preserve"
     ps = push
-    pfl = "push –-force-with-lease"
+    pfl = "push --force-with-lease"
     r = "rebase -i"
     rc = "add .; git rebase --continue"
     s = status

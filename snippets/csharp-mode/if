@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 #name : if
 # --
-if(${1:predicate})
+if (${1:predicate})
 {
     $0
 }

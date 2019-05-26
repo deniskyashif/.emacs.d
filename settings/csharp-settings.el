@@ -2,10 +2,7 @@
 ;; C# ;;
 ;;::::;;
 
-(when linux-env
-  (setq omnisharp-server-executable-path "~/omnisharp-roslyn/scripts/Omnisharp"))
-(when mswindows-env
-  (setq omnisharp-server-executable-path "c:/Bin/omnisharp-win-x86/OmniSharp.exe"))
+(setq omnisharp-server-executable-path "~/omnisharp-osx/run")
 
 (eval-after-load
   'company
@@ -24,11 +21,16 @@
   (setq tab-width 4)
   (setq evil-shift-width 4)
 
-  (electric-pair-local-mode 1) ;; Emacs 25
+  (electric-pair-local-mode 1)
 
-  (local-set-key (kbd "C-c r r") 'omnisharp-run-code-action-refactoring)
-  (local-set-key (kbd "C-c C-c") 'recompile)
-  (local-set-key (kbd "M-.") 'omnisharp-go-to-definition))
+  (local-set-key (kbd "C-c o d") 'omnisharp-go-to-definition)
+  (local-set-key (kbd "C-c o f") 'omnisharp-code-format-entire-file)
+  (local-set-key (kbd "C-c o i") 'omnisharp-find-implementations)
+  (local-set-key (kbd "C-c o r") 'omnisharp-run-code-action-refactoring)
+  (local-set-key (kbd "C-c o s") 'omnisharp-helm-find-symbols)
+  (local-set-key (kbd "C-c o u") 'omnisharp-helm-find-usages)
+  (local-set-key (kbd "C-c o e") 'omnisharp-rename)
+  (local-set-key (kbd "C-c o g") 'omnisharp-fix-usings))
 
 (add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)
 

@@ -105,13 +105,13 @@
 
 ;; global keyboard shortcuts
 (global-set-key [f2] 'my:open-workspace-dir)
-(global-set-key [f8] 'project-explorer-toggle)
-(global-set-key [f10] 'linum-mode)
-(global-set-key (kbd "C-c C-g") 'goto-line)
+(global-set-key [f3] 'magit-status)
 (global-set-key [f5] 'revert-buffer-no-confirm)
 (global-set-key [f6] 'shell-command)
-(global-set-key [f12] 'my:open-settings-dir)
-(global-set-key [f9] 'magit-status)
+(global-set-key [f8] 'project-explorer-toggle)
+(global-set-key [f9] 'my:open-settings-dir)
+(global-set-key [f10] 'linum-mode)
+(global-set-key (kbd "C-c C-g") 'goto-line)
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-c k") 'kill-whole-line)
 (global-set-key (kbd "C-k") 'kill-line)

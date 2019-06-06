@@ -34,4 +34,6 @@
 
 (add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)
 
+(add-to-list 'auto-mode-alist '("\\.csproj$" . xml-mode))
+
 (provide 'csharp-settings)

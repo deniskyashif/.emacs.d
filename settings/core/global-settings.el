@@ -40,8 +40,8 @@
 
 ; default window width and height
 (defun custom-set-frame-size ()
-  (add-to-list 'default-frame-alist '(height . 55))
-  (add-to-list 'default-frame-alist '(width . 150)))
+  (add-to-list 'default-frame-alist '(height . 75))
+  (add-to-list 'default-frame-alist '(width . 180)))
 
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
@@ -109,8 +109,8 @@
 (global-set-key [f5] 'revert-buffer-no-confirm)
 (global-set-key [f6] 'shell-command)
 (global-set-key [f8] 'project-explorer-toggle)
-(global-set-key [f9] 'my:open-settings-dir)
 (global-set-key [f10] 'linum-mode)
+(global-set-key [f12] 'my:open-settings-dir)
 (global-set-key (kbd "C-c C-g") 'goto-line)
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-c k") 'kill-whole-line)
@@ -185,7 +185,9 @@
   (prefer-coding-system 'utf-8))
 
 (set-utf8-everywhere)
+
 (powerline-default-theme)
+
 
 (add-hook 'org-mode-hook 'visual-line-mode)
 (add-hook 'text-mode-hook 'visual-line-mode)
@@ -250,12 +252,6 @@
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-
-;; Bind command key to meta on Mac
-(setq mac-option-key-is-meta nil
-      mac-command-key-is-meta t
-      mac-command-modifier 'meta
-      mac-option-modifier 'none)
 
 (delete-file "~/Library/Colors/Emacs.clr")
 

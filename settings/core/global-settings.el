@@ -104,6 +104,7 @@
   (newline-and-indent))
 
 ;; global keyboard shortcuts
+(global-set-key [f1] 'cheat-sh)
 (global-set-key [f2] 'my:open-workspace-dir)
 (global-set-key [f3] 'magit-status)
 (global-set-key [f5] 'revert-buffer-no-confirm)
@@ -118,7 +119,7 @@
 (global-set-key (kbd "C-S-O") 'my:new-line-no-break)
 (global-set-key (kbd "C-o") 'open-line)
 (global-set-key (kbd "C-.") 'company-complete)
-(define-key global-map (kbd "C-:") 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; backup files
 (setq backup-directory-alist `(("." . "~/.emacs.d/.saves")))
@@ -254,5 +255,7 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (delete-file "~/Library/Colors/Emacs.clr")
+
+(exec-path-from-shell-initialize)
 
 (provide 'global-settings)

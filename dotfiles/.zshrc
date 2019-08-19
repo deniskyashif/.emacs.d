@@ -8,7 +8,9 @@ export ZSH="/Users/denis/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bureau"
+
+# ZSH_THEME="bureau"
+ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,3 +108,13 @@ alias dnwr="dotnet watch run"
 alias dnt="dotnet test"
 alias dnwt="dotnet watch test"
 alias md=mkdir
+
+# news
+export IN_API_KEY="231712d5d81d44f5ac0cc93d96e58fe4"
+
+export GOPATH=$HOME/go
+
+autoload bashcompinit
+bashcompinit
+source /usr/local/etc/bash_completion.d/*
+

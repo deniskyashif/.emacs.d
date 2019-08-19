@@ -17,7 +17,7 @@
     d = diff
     dc = "diff --cached"
     f = fetch
-    l = "log --graph --decorate --pretty='format:%C(yellow)%h%Cgreen%d%Creset%s %C(white) (%an, %ar)%Creset' --abbrev-commit"
+    l = "log --graph --decorate --pretty='format:%C(yellow)%h%Cgreen%d%Creset %s%C(white) (%an, %ar)%Creset' --abbrev-commit"
     ls = ls-files
     p = "pull"
     pl = "pull --rebase=preserve"

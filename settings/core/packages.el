@@ -7,9 +7,8 @@
 ;; list packages 
 (setq package-list '(ace-jump-mode
                      ace-window
-                     cider
+                     cheat-sh
                      company
-                     company-tern
                      company-web
                      dashboard
                      editorconfig
@@ -36,7 +35,6 @@
 
 ;; list repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                       ;;("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.org/packages/")))
 
 ;; activate all the packages (in particular autoloads)

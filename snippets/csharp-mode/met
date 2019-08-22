@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+#name : met
+# --
+${4:private} ${3:int} ${1:MethodName}($2)
+{
+    $0
+}

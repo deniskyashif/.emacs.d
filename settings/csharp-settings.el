@@ -2,8 +2,6 @@
 ;; C# ;;
 ;;::::;;
 
-(setq omnisharp-server-executable-path "~/omnisharp-osx/run")
-
 (eval-after-load
   'company
   '(add-to-list 'company-backends #'company-omnisharp))

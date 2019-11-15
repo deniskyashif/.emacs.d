@@ -43,3 +43,7 @@ emacs-25/
 server/
 url/
 /recentf
+/ac-comphist.dat
+/.mc-lists.el
+/projectile-bookmarks.eld
+/transient/

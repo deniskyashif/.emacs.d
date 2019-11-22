@@ -10,13 +10,21 @@
                      cheat-sh
                      company
                      company-web
+                     company-go
+                     company-lsp
                      dashboard
                      editorconfig
                      emmet-mode
+                     exec-path-from-shell
                      flymake
                      flymake-cursor
+                     go-eldoc
+                     go-guru
+                     go-rename
+                     golint
                      helm
                      js2-mode
+                     lsp-mode
                      magit
                      multiple-cursors
                      omnisharp

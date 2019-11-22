@@ -27,3 +27,6 @@
 
 ;; web mode (html, css, jsx)
 (require 'web-mode-settings)
+
+;; golang
+(require 'go-settings)

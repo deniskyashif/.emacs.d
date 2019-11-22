@@ -1,5 +1,8 @@
 (require 'company)
+(require 'company-lsp)
 (require 'company-web-html)                          ; load company mode html backend
+
+(push 'company-lsp company-backends)
 
 (setq company-tooltip-limit 20)                      ; bigger popup window
 (setq company-tooltip-align-annotations 't)          ; align annotations to the right tooltip border

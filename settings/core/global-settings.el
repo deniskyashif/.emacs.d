@@ -66,8 +66,10 @@
 ; highlight parentheses when the cursor is next to them
 (show-paren-mode 1)
 
-; text decoration
-; (setq font-lock-maximum-decoration 1)
+;; text decoration
+;; (setq font-lock-maximum-decoration 1)
+(set-frame-font "SF Mono 13" nil t)
+
 (global-font-lock-mode 1)
 (global-hi-lock-mode nil)
 (setq jit-lock-contextually 1)
@@ -257,5 +259,15 @@
 (delete-file "~/Library/Colors/Emacs.clr")
 
 (exec-path-from-shell-initialize)
+
+(set-face-attribute 'default nil :height 125)
+
+;; from https://github.com/jhamrick/emacs
+;---------------------------------------------------------------------
+;; Put auto 'custom' changes in a separate file (this is stuff like
+;; custom-set-faces and custom-set-variables)
+(load 
+ (setq custom-file (expand-file-name "settings/core/custom.el" user-emacs-directory))
+ 'noerror)
 
 (provide 'global-settings)

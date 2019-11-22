@@ -27,14 +27,3 @@
 
 ;; web mode (html, css, jsx)
 (require 'web-mode-settings)
-
-;; python
-(require 'py-settings)
-
-;; from https://github.com/jhamrick/emacs
-;---------------------------------------------------------------------
-;; Put auto 'custom' changes in a separate file (this is stuff like
-;; custom-set-faces and custom-set-variables)
-(load 
- (setq custom-file (expand-file-name "settings/core/custom.el" user-emacs-directory))
- 'noerror)

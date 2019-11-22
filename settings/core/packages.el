@@ -12,7 +12,6 @@
                      company-web
                      dashboard
                      editorconfig
-                     elpy
                      emmet-mode
                      flymake
                      flymake-cursor
@@ -23,7 +22,6 @@
                      omnisharp
                      page-break-lines
                      powerline
-                     prettier-js
                      projectile
                      project-explorer
                      smooth-scrolling

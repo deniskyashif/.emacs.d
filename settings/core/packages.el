@@ -7,6 +7,7 @@
 ;; list packages 
 (setq package-list '(ace-jump-mode
                      ace-window
+                     all-the-icons
                      cheat-sh
                      company
                      company-web
@@ -27,6 +28,8 @@
                      lsp-mode
                      magit
                      multiple-cursors
+                     neotree
+                     nord-theme
                      omnisharp
                      page-break-lines
                      powerline

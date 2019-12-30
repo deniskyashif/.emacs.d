@@ -66,9 +66,7 @@
 ; highlight parentheses when the cursor is next to them
 (show-paren-mode 1)
 
-;; text decoration
-;; (setq font-lock-maximum-decoration 1)
-(set-frame-font "SF Mono 13" nil t)
+;; (set-frame-font "SF Mono 13" nil t)
 
 (global-font-lock-mode 1)
 (global-hi-lock-mode nil)
@@ -111,7 +109,7 @@
 (global-set-key [f3] 'magit-status)
 (global-set-key [f5] 'revert-buffer-no-confirm)
 (global-set-key [f6] 'shell-command)
-(global-set-key [f8] 'project-explorer-toggle)
+(global-set-key [f8] 'neotree-toggle)
 (global-set-key [f10] 'linum-mode)
 (global-set-key [f12] 'my:open-settings-dir)
 (global-set-key (kbd "C-c C-g") 'goto-line)
@@ -270,4 +268,12 @@
  (setq custom-file (expand-file-name "settings/core/custom.el" user-emacs-directory))
  'noerror)
 
+(require 'all-the-icons)
+;; run once M-x all-the-icons-install-fonts
+(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-window-fixed-size nil)
+
+
 (provide 'global-settings)
+

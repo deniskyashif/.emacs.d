@@ -40,8 +40,8 @@
 
 ; default window width and height
 (defun custom-set-frame-size ()
-  (add-to-list 'default-frame-alist '(height . 75))
-  (add-to-list 'default-frame-alist '(width . 180)))
+  (add-to-list 'default-frame-alist '(height . 45))
+  (add-to-list 'default-frame-alist '(width . 150)))
 
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
@@ -66,7 +66,7 @@
 ; highlight parentheses when the cursor is next to them
 (show-paren-mode 1)
 
-;; (set-frame-font "SF Mono 13" nil t)
+(set-frame-font "JetBrains Mono 10" nil t)
 
 (global-font-lock-mode 1)
 (global-hi-lock-mode nil)
@@ -86,7 +86,7 @@
   "Go to my workspace"
   (interactive)
   (if mswindows-env
-      (find-file "D:/Workspace")
+      (find-file "C:\\Users\\dkyashif\\Workspace")
     (find-file "~/Workspace")))
 
 (defun my:search-in-google ()
@@ -172,7 +172,6 @@
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (global-set-key (kbd "C-H") 'helm-show-kill-ring)
 
-
 ;; set utf-8 by default
 (defun set-utf8-everywhere ()
   (setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
@@ -188,7 +187,7 @@
 (set-utf8-everywhere)
 
 (powerline-default-theme)
-
+(powerline-reset)
 
 (add-hook 'org-mode-hook 'visual-line-mode)
 (add-hook 'text-mode-hook 'visual-line-mode)
@@ -200,33 +199,7 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 (require 'page-break-lines)
-(turn-on-page-break-lines-mode)
-
-(require 'dashboard)
-(dashboard-setup-startup-hook)
-
-(setq dashboard-banner-logo-title "Welcome to Emacs")
-
-;; To enable .png support in Windows
-;; Download Inkscape and copy zlib1.dll, libpng16-16.dll to emacs/bin
-;; to check what needs to be copied eval:
-;; (cdr (assq 'png dynamic-library-
-
-(setq dashboard-startup-banner 'logo)
-(setq dashboard-items '((recents  . 10)
-                        (bookmarks . 5)
-                        (projects . 5)
-                        (agenda . 5)
-                        (registers . 5)))
-
-(require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-(require 'page-break-lines)
-(turn-on-page-break-lines-mode)
+(page-break-lines-mode)
 
 (require 'dashboard)
 (dashboard-setup-startup-hook)
@@ -256,7 +229,8 @@
 
 (delete-file "~/Library/Colors/Emacs.clr")
 
-(exec-path-from-shell-initialize)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 (set-face-attribute 'default nil :height 125)
 
@@ -268,12 +242,21 @@
  (setq custom-file (expand-file-name "settings/core/custom.el" user-emacs-directory))
  'noerror)
 
-(require 'all-the-icons)
+;; (require 'all-the-icons)
 ;; run once M-x all-the-icons-install-fonts
-(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+;; (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-fixed-size nil)
 
+(defun my:org-mode-hook ()
+  (custom-set-faces
+   '(org-level-1 ((t (:inherit outline-1 :height 1.5))))
+   '(org-level-2 ((t (:inherit outline-2 :height 1.3))))
+   '(org-level-3 ((t (:inherit outline-3 :height 1.1))))
+   '(org-level-4 ((t (:inherit outline-4 :height 1.05))))
+   '(org-level-5 ((t (:inherit outline-5 :height 1.0))))))
+
+(add-hook 'org-mode-hook #'my:org-mode-hook)
 
 (provide 'global-settings)
 

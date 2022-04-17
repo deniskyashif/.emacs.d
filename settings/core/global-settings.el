@@ -66,7 +66,7 @@
 ; highlight parentheses when the cursor is next to them
 (show-paren-mode 1)
 
-(set-frame-font "JetBrains Mono 10" nil t)
+(set-frame-font "JetBrains Mono 14" nil t)
 
 (global-font-lock-mode 1)
 (global-hi-lock-mode nil)
@@ -186,6 +186,7 @@
 
 (set-utf8-everywhere)
 
+(require 'powerline)
 (powerline-default-theme)
 (powerline-reset)
 
@@ -242,12 +243,6 @@
  (setq custom-file (expand-file-name "settings/core/custom.el" user-emacs-directory))
  'noerror)
 
-;; (require 'all-the-icons)
-;; run once M-x all-the-icons-install-fonts
-;; (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-(setq neo-window-fixed-size nil)
-
 (defun my:org-mode-hook ()
   (custom-set-faces
    '(org-level-1 ((t (:inherit outline-1 :height 1.5))))
@@ -257,6 +252,10 @@
    '(org-level-5 ((t (:inherit outline-5 :height 1.0))))))
 
 (add-hook 'org-mode-hook #'my:org-mode-hook)
+
+; Use Command as Meta key on Mac
+(setq mac-option-modifier 'super)
+(setq mac-command-modifier 'meta)
 
 (provide 'global-settings)
 

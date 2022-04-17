@@ -7,12 +7,10 @@
 ;; list packages 
 (setq package-list '(ace-jump-mode
                      ace-window
-                     all-the-icons
                      cheat-sh
                      company
                      company-web
                      company-go
-                     company-lsp
                      dashboard
                      editorconfig
                      emmet-mode

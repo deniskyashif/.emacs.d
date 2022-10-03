@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-#name : reduce
-# --
-${1:collection}.reduce(function($2) {
-    $0
-});

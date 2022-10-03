@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-#name : filter
-# --
-${1:collection}.filter(function($2) {
-    $0
-});

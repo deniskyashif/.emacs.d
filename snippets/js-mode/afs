@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-#name : arrow function single line
-# --
-$1 => $0

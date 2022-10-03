@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-#name : jasmine async spec
-# --
-it('$1', async () => {
-    $0
-});

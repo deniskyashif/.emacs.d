@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-#name : filter
-# --
-${1:collection}.filter($2 => $0);

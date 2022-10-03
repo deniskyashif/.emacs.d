@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-#name : arrow function
-# --
-($1) => {
-   $0
-}

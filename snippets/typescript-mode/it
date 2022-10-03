@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-#name : jasmine spec
-# --
-it('$1', () => {
-    $0
-});

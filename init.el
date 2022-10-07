@@ -25,7 +25,7 @@
 (defun my:open-workspace-dir ()
   "Go to my workspace"
   (interactive)
-  (find-file "~/Workspace"))
+  (find-file "c:/Users/dkyashif/Workspace"))
 
 (global-set-key [f2] 'my:open-workspace-dir)
 (global-set-key [f3] 'magit-status)
@@ -54,6 +54,7 @@
 
 ; ignore case when searching
 (setq-default case-fold-search 1)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

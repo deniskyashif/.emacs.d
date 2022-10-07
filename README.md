@@ -18,7 +18,7 @@ git submodule init
 git submodule update
 ```
 
-Update `~/.emacs.d/nano-emacs/nano-init.el`
+Update `~/.emacs.d/nano-emacs/nano.el`
 
 ```diff
 -(add-to-list 'load-path "/Users/rougier/Documents/GitHub/nano-emacs")

@@ -22,6 +22,8 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+(set-frame-font "JetBrains Mono 13" nil t)
+
 (defun my:open-workspace-dir ()
   "Go to my workspace"
   (interactive)

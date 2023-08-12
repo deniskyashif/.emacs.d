@@ -7,7 +7,7 @@
 [push]
     default = current
 [core]
-    editor = "emacs -nw -q"
+    editor = "vi"
 [alias]
     a = "add -A"
     amend = "commit --amend"

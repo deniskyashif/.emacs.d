@@ -7,10 +7,9 @@
 [push]
     default = current
 [core]
-    editor = "emacs -nw -q"
+    editor = "vi"
 [alias]
     a = "add -A"
-    amend = "commit --amend"
     b = branch
     c = commit
     co = checkout
@@ -23,7 +22,7 @@
     pl = "pull --rebase=preserve"
     ps = push
     pfl = "push --force-with-lease"
-    r = "rebase -i"
+    ri = "rebase -i"
     rc = "add .; git rebase --continue"
     s = status
     show = hsow
